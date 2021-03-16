@@ -37,7 +37,7 @@ public:
         int right = matrix[0].size() - 1;
         while (true)
         {
-            for (int i = left; i <= right; i++)//向右移动直到最右
+            for (int i = left; i <= right; ++i)//向右移动直到最右
             {
                 ans.push_back(matrix[up][i]);
             }
@@ -45,7 +45,7 @@ public:
             {
                 break;
             }
-            for (int i = up; i <=down ; i++)//向下
+            for (int i = up; i <=down ; ++i)//向下
             {
                 ans.push_back(matrix[i][right]);
             }
