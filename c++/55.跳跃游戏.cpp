@@ -19,7 +19,7 @@ public:
         {
             for (int j = i - 1; j >= 0; j--)
             {
-                if((dp[j] == 1) && nums[j] >= i - j)
+                if((dp[j] == 1) && nums[j] >= i - j) //状态方程
                 {
                     dp[i] = 1;
                     break;
