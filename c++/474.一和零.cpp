@@ -16,7 +16,7 @@ public:
             string s = strs[i - 1];
             int len = s.length();
             int n0 = 0, n1 = 0;
-
+            //统计0 与 1的个数；
             for(int l = 0; l < len; l++)
             {
                 if(s[l] == '0')
@@ -24,12 +24,14 @@ public:
                 else
                     n1++;
             }
+            //统计剩余0 与 1个数，并在maxtrix矩阵中找寻最大值
             for(int j = m; j >= 0; j--)
             {
                 for(int k = n; k >= 0; k--)
                 {
                     if(n0 <= j && n1 <= k)
                         maxtrix[j][k] = max(maxtrix[j - n0][k - n1] + 1, maxtrix[j][k]);
+                        //此状态方程再思考
                 }
             }
         }
