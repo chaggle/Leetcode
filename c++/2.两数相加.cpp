@@ -17,6 +17,7 @@
  */
 class Solution {
 public:
+    //其中一种解法而已
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
         int len1 = 1; //记录l1长度
         int len2 = 1; //记录l2长度
@@ -24,23 +25,23 @@ public:
         ListNode* p = l1;
         ListNode* q = l2;
 
-        while(p->next != NULL) //获取l1长度
+        while(p -> next != NULL) //获取l1长度
         {
             len1++;
-            p = p->next;
+            p = p -> next;
         }
 
-        while (q->next != NULL) //获取l2长度
+        while (q -> next != NULL) //获取l2长度
         {
             len2++;
-            q = q->next;
+            q = q -> next;
         }
         
         if(len1 > len2) //l1长，在l2末尾补零
         {
-            for (int i = 1; i <= len1-len2; i++)
+            for (int i = 1; i <= len1 - len2; i++)
             {
-                q->next = new ListNode(0);
+                q -> next = new ListNode(0);
                 q = q->next;
             } 
         }

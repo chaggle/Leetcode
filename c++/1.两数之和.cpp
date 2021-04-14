@@ -11,8 +11,8 @@ public:
     // 第一种方法，此为最直接的想法，暴力求解，直接两次遍历
     vector<int> twoSum(vector<int>& nums, int target) {
         int i, j;
-        for (i = 0; i < nums.size()-1; i++) {
-            for(j = i+1; j < nums.size(); j++) {
+        for (i = 0; i < nums.size() - 1; i++) {
+            for(j = i + 1; j < nums.size(); j++) {
                 if(nums[i] + nums[j] == target)
                     return {i,j};
             }    
