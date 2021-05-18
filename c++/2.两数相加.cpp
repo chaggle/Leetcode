@@ -62,17 +62,17 @@ public:
         while (p != NULL && q != NULL)
         {
             i = count + p->val + q->val;
-            w->next = new ListNode(i%10);
-            count=i>=10?true:false;
-            w = w->next;
-            p = p->next;
-            q = q->next;
+            w -> next = new ListNode(i % 10);
+            count= i >= 10 ?true:false;
+            w = w -> next;
+            p = p -> next;
+            q = q -> next;
         }
         
         if (count)
         {
-            w->next = new ListNode(1);
-            w = w->next;  
+            w -> next = new ListNode(1);
+            w = w -> next;  
         }
         return l3->next;
     }
