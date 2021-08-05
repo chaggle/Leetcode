@@ -29,7 +29,7 @@ public:
             if(cur -> val == val)  
                 pre -> next = cur -> next;
             else 
-                pre = pre -> next;
+                pre = pre -> next; 
             cur = cur -> next;
         }
         return dummy -> next;
